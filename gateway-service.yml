@@ -14,11 +14,38 @@ spring:
           enabled: true
       globalcors:
         corsConfigurations:
-          "[/**]":
+          [/api/v1/token/**]:
             allowedOriginPatterns: "*"
-            allowedMethods: GET,POST,PUT,DELETE
+            allowedMethods: "GET,POST,PUT,DELETE"
             allowedHeaders: "*"
             allowCredentials: true
+            maxAge: 3600
+          [/api/v1/members/**]:
+            allowedOriginPatterns: "*"
+            allowedMethods: "GET,POST,PUT,DELETE"
+            allowedHeaders: "*"
+            allowCredentials: true
+            maxAge: 3600
+          [/api/v1/attendances/**]:
+            allowedOriginPatterns: "*"
+            allowedMethods: "GET,POST,PUT,DELETE"
+            allowedHeaders: "*"
+            allowCredentials: true
+            maxAge: 3600
+          [/api/v1/books/**]:
+            allowedOriginPatterns: "*"
+            allowedMethods: "GET,POST,PUT,DELETE"
+            allowedHeaders: "*"
+            allowCredentials: true
+            maxAge: 3600
+          [/api/v1/chat/**]:
+            allowedOriginPatterns: "http://localhost:10253"
+            allowedMethods: "GET,POST,PUT,DELETE"
+            allowedHeaders: "*"
+            allowCredentials: true
+            maxAge: 3600
+        add-to-simple-url-handler-mapping: true
+      default-filters: DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials
 
 jwt:
   secret: |
