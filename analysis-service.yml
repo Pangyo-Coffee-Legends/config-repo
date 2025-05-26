@@ -3,15 +3,19 @@ spring:
   application:
     name: analysis-service
 
-server:
-  port: 10261
-
-spring:
   datasource:
     url: jdbc:mysql://s4.java21.net:13306/aiot02_team2
     username: aiot02_team2
     password: m/NWS@3y-8)UZ2Zo
 
+server:
+  port: 10261
+
 gemini:
   api:
     key: AIzaSyDICxc4TI8A6rddEPA_lrGhWpoBdska-gE
+
+work:
+  entry:
+    service:
+      url: http://localhost:10256
