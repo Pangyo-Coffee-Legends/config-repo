@@ -1,0 +1,27 @@
+# config-repo/data-processor-service.yml
+spring:
+  application:
+    name: data-processor-service
+
+server:
+  port: 10262
+
+mqtt:
+  broker:
+    url: tcp://115.94.72.197:1883
+  client:
+    id: coffee-dev-inho-test
+  topic: data/#
+
+influxdb:
+  url: http://localhost:10268
+  token: RmaabELI9VpYPRu4nt_xBZX5l3Gv5lx8XnR4mVZnqep4Ya3eYrfpLUk4Y4dYE4J0mlcFHFPLUCKh8a4jq_lMNw==
+  org: aiot2-team2-coffee
+  bucket: coffee-mqtt
+
+model:
+  api-url: http://localhost:10264/api/v1/sensor
+
+async:
+  core-pool-size: 4
+  max-pool-size: 10

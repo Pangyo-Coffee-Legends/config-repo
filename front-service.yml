@@ -1,0 +1,32 @@
+# config-repo/front-service.yml
+spring:
+  application:
+    name: front-service
+
+server:
+  port: 10253
+
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 284628235267-h6ijnjaa9hhmtc3rs7rmeb8f5e88f0v8.apps.googleusercontent.com
+            client-secret: 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
+            scope: openid,profile,email
+        provider:
+          google:
+            authorization-uri: https://accounts.google.com/o/oauth2/v2/auth
+            token-uri: https://oauth2.googleapis.com/token
+            user-info-uri: https://www.googleapis.com/oauth2/v3/userinfo
+
+spring:
+  config:
+    import: optional:file:.env[.properties]

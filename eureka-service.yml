@@ -1,0 +1,28 @@
+# config-repo/eureka-service.yml
+spring:
+  application:
+    name: eureka-service
+
+server:
+  port: 10252
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  server:
+    enableSelfPreservation: false
+  instance:
+    hostname: eureka.aiot2.live
+    prefer-ip-address: false
+    non-secure-port-enabled: false
+    secure-port-enabled: true
+    secure-port: 443
+    status-page-url: https://eureka.aiot2.live/info
+    health-check-url: https://eureka.aiot2.live/actuator/health
+    home-page-url: https://eureka.aiot2.live/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

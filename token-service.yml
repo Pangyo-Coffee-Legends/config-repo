@@ -1,0 +1,21 @@
+# config-repo/token-service.yml
+spring:
+  application:
+    name: token-service
+
+server:
+  port: 10269
+
+jwt:
+  access:
+    expiration: 3600000
+  refresh:
+    expiration: 86400000
+
+spring:
+  data:
+    redis:
+      host: s4.java21.net
+      port: 6379
+      password: "*N2vya7H@muDTwdNMR!"
+      database: 275

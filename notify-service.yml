@@ -1,0 +1,42 @@
+# config-repo/notify-service.yml
+spring:
+  application:
+    name: notify-service
+
+server:
+  port: 10260
+
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    protocol: smtp
+    username: knagsw5990@gmail.com
+    password: lckzixzmryvliiba
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    default-encoding: UTF-8
+    debug: true
+
+email:
+  queue: email-queue
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: nhnacademy123!
+    listener:
+      simple:
+        retry:
+          enabled: true
+          max-attempts: 3
+          initial-interval: 2000
+        default-requeue-rejected: false
+      direct:
+        acknowledge-mode: auto
