@@ -16,6 +16,9 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
+  sql:
+    init:
+      mode: never 
   data:
     web:
       pageable:
