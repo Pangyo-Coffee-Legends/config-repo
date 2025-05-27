@@ -19,3 +19,46 @@ spring:
       port: 6379
       password: "*N2vya7H@muDTwdNMR!"
       database: 275
+
+jwt:
+  private: 
+    secret: |
+      -----BEGIN PRIVATE KEY-----
+      MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCTnWdYy8FXAaWD
+      mGiiWrYnTNmBuYZWcXpmTNCWizPZtlBTwjbUtTRjYZbvxb7eX950FjwbzIATLcDK
+      5sgs0sBNIwH6Rzdkf61OPJwshzImIRNH53AaTNRxgo/74mwo10Sx6+WQK1n5AxN/
+      mhuW/nsVpnECqwIoWvn+JHByQ/QrFXLIE8zRZfKmqIVRvnEcrNcCzv7W44h+3bFb
+      WnNXzENILrfMNqR6lj4sU+KO59WADbw9FHkz+LiDkz8txddPpnOcg7EirnZtO8OA
+      C6vfZx7vV5ULtl6wfNbmj9vA3UFydni4i5pQ0RRLISlQo6xlQ5Yc5KowYDC4iYP0
+      9P+HqRKhAgMBAAECggEABcCFsSxZZ5RJGJBlDWSHAg+IzzkFPtOTry5Rl3grqFFm
+      HmlsPQwlkzTPjp7QQfaO4sumAnhMylKHV3C4PqTkuOzDDDdftXMTNAABHuwSvHEg
+      APaIBAJX6edqSGipicrfoqY8TwqdaipgRWHiLtdSQQT4FOBIiH2JDcnqNs2mk1Im
+      vBtdBTDx5n7rCCvDviXeNOh0pCFLcA7YrH7lDRPa6RH62gVZk75UQao48rfmIev3
+      BIp9aXvOWJMJr1aJK7hheEo/74bqP8UgWO0kbvDEExLRTWqUIYbOjwjVWaQWpVbU
+      aK0dqP5Na0p7C5v7+gyeMMozo5c0OsDSPgNEWKl1tQKBgQC90yW6BTccGDuIPshu
+      kf/SiIDIRpiK8rrsg0M4t1sVPefOh4Z/A1zzbAOHoEUT5Cp16FTFgaAipSol1uLf
+      Gku8CrcXaptutNrvpRfNqtjA0m2ch4VlHZw28gNUfeO4knfAxmSmMS57jaM+ovpE
+      GU0qarqnADYwHot0svsPgKhLJQKBgQDHEz6B0CvSU7NVIVD9nQjbMwpRRTDlGjq0
+      RPmG3ZnOI3MNQY9ugnxUpqdBjRaA+BP/7v/p1NvF0qS39s4RUbGCjEnvEyL3aXKv
+      NeaTFrAy35mcqzLMtCPOKK/gTnvmNcgpGLgGLoZ2Mk/lTma2AhKdk7NUbqhHVBd4
+      22zOoL9uzQKBgEimGNg6yr6r34zjSl5W7iurJm5/5j23bCa8jeuU8P0ONjtqzuSp
+      ateWzTsI8acNOdrqUhdM5vabc6gLt8RfEgEjsLL7kAUsnmX9L0D9U/toDZ9Mlpb+
+      YBz/PpsFmzO2irJyu26HgBy1NnbwdQu/CzNiqZDkmdiMuB6vqTpjqQUpAoGBAK9v
+      wyctaGD7iE/eg3xtFm/uJAqI+lT8b32MR4ZV5gRm8y5cd2WBMsZ682zuREW12hIy
+      8m6EOoW0Y5sHsoRKxS9yKHm7GJaG5B2KV7+KQA8lRD9wE92YZvF4o73+DGxNOy8U
+      bKBuAetJ3WUMWbHOU89waZpfxobNkb3dSZ8yxGGFAoGAHNfxTcqkYyXWStMiAiCZ
+      jq8fstVUkOz8+YqjgC6LlIXnG6kQjSSazvs08fJiKLOU/yT5x18bDdGrxZEbD3vj
+      rNBS6Y0h+9oQ/hUng6JLHT4pbtgBfcYKK4QuhoyJDjIpnClEfq8rPy4IxK5UO2uQ
+      uDAdSG94rFme1cuNNn2/c/U=
+      -----END PRIVATE KEY-----
+  public: 
+    secret: |
+      -----BEGIN PUBLIC KEY-----
+      MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk51nWMvBVwGlg5hoolq2
+      J0zZgbmGVnF6ZkzQlosz2bZQU8I21LU0Y2GW78W+3l/edBY8G8yAEy3AyubILNLA
+      TSMB+kc3ZH+tTjycLIcyJiETR+dwGkzUcYKP++JsKNdEsevlkCtZ+QMTf5oblv57
+      FaZxAqsCKFr5/iRwckP0KxVyyBPM0WXypqiFUb5xHKzXAs7+1uOIft2xW1pzV8xD
+      SC63zDakepY+LFPijufVgA28PRR5M/i4g5M/LcXXT6ZznIOxIq52bTvDgAur32ce
+      71eVC7ZesHzW5o/bwN1BcnZ4uIuaUNEUSyEpUKOsZUOWHOSqMGAwuImD9PT/h6kS
+      oQIDAQAB
+      -----END PUBLIC KEY-----
