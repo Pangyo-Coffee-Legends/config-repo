@@ -9,7 +9,7 @@ spring:
     redis:
       host: s4.java21.net
       port: 6379
-      password: "*N2vya7H@muDTwdNMR!"
+      password: '*N2vya7H@muDTwdNMR!'
       database: 276
       timeout: 60000
       lettuce:
