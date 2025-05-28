@@ -1,7 +1,7 @@
 # config-repo/iot-service.yml
 spring:
   application:
-    name: iot_service
+    name: iot-service
   data:
     web:
       pageable:
