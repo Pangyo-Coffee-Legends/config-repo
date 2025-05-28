@@ -2,6 +2,12 @@
 spring:
   application:
     name: token-service
+  data:
+    redis:
+      host: s4.java21.net
+      port: 6379
+      password: "*N2vya7H@muDTwdNMR!"
+      database: 275
 
 server:
   port: 10269
@@ -11,16 +17,6 @@ jwt:
     expiration: 3600000
   refresh:
     expiration: 86400000
-
-spring:
-  data:
-    redis:
-      host: s4.java21.net
-      port: 6379
-      password: "*N2vya7H@muDTwdNMR!"
-      database: 275
-
-jwt:
   private: 
     secret: |
       -----BEGIN PRIVATE KEY-----
