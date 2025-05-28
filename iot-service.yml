@@ -1,0 +1,76 @@
+# config-repo/iot-service.yml
+spring:
+  application:
+    name: iot_service
+  data:
+    web:
+      pageable:
+        one-indexed-parameters: true
+    redis:
+      host: s4.java21.net
+      port: 6379
+      password: "*N2vya7H@muDTwdNMR!"
+      database: 276
+      timeout: 60000
+      lettuce:
+        pool:
+          max-active: 20
+          max-idle: 10
+          min-idle: 5
+  redis:
+    listener:
+      subscription-registration-timeout: 30s
+  datasource:
+    type: org.apache.commons.dbcp2.BasicDataSource
+    url: jdbc:mysql://s4.java21.net:13306/aiot02_team2
+    username: aiot02_team2
+    password: m/NWS@3y-8)UZ2Zo
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    dbcp2:
+      initial-size: 5
+      max-total: 5
+      max-idle: 5
+      min-idle: 5
+      validation-query: select 1
+      test-on-borrow: true
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: validate
+
+server:
+  port: 10266
+  servlet:
+    session:
+      timeout: 10m
+
+rule-engine-service:
+  url: http://localhost:10263
+
+member-service:
+  url: http://localhost:10255
+
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          client:
+            RestTemplate: DEBUG
+        security: trace
+        data:
+          redis: DEBUG
+        springframework: DEBUG
+    feign:
+      Logger: DEBUG
+  # 파일 로그가 필요하면 아래 주석 해제
+  # file:
+  #   name: ./logs/application.log
+
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: FULL
