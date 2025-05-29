@@ -6,10 +6,12 @@ eureka:
     register-with-eureka: true
   instance:
     prefer-ip-address: true
-
+    
 logging:
   file:
     path: ./logs
+  level:
+    root: debug
 
 management:
   endpoints:
