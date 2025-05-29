@@ -17,7 +17,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,info,refresh,env,configprops
+        include: health,info,refresh,env,configprops,conditions
   endpoint:
     refresh:
       enabled: true
