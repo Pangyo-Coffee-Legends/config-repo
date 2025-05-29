@@ -32,7 +32,13 @@ spring:
             allowedHeaders: "*"
             allowCredentials: true
             maxAge: 3600
-          [/api/v1/books/**]:
+          [/api/v1/bookings/**]:
+            allowedOriginPatterns: "*"
+            allowedMethods: "GET,POST,PUT,DELETE"
+            allowedHeaders: "*"
+            allowCredentials: true
+            maxAge: 3600
+           [/api/v1/meeting-rooms/**]:
             allowedOriginPatterns: "*"
             allowedMethods: "GET,POST,PUT,DELETE"
             allowedHeaders: "*"
