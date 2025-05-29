@@ -1,8 +1,6 @@
-# config-repo/analysis-service.yml
 spring:
   application:
-    name: analysis-service
-
+    name: analysis-service   
 
 server:
-  port: 10261
+  port: 10261                
