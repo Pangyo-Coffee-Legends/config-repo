@@ -6,7 +6,7 @@ spring:
     redis:
       host: s4.java21.net
       port: 6379
-      password: *N2vya7H@muDTwdNMR!
+      password: "*N2vya7H@muDTwdNMR!"
       database: 275
 
 server:
@@ -18,7 +18,7 @@ jwt:
   refresh:
     expiration: 86400000
   private: 
-    secret:
+    secret: |
       -----BEGIN PRIVATE KEY-----
       MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCTnWdYy8FXAaWD
       mGiiWrYnTNmBuYZWcXpmTNCWizPZtlBTwjbUtTRjYZbvxb7eX950FjwbzIATLcDK
@@ -48,7 +48,7 @@ jwt:
       uDAdSG94rFme1cuNNn2/c/U=
       -----END PRIVATE KEY-----
   public: 
-    secret:
+    secret: |
       -----BEGIN PUBLIC KEY-----
       MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk51nWMvBVwGlg5hoolq2
       J0zZgbmGVnF6ZkzQlosz2bZQU8I21LU0Y2GW78W+3l/edBY8G8yAEy3AyubILNLA
