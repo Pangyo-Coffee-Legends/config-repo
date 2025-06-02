@@ -2,20 +2,26 @@
 spring:
   application:
     name: notify-service
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${DATABASE_HOST:s4.java21.net}:${DATABASE_PORT:13306}/${DATABASE_NAME:aiot02_team2}
+    username: ${DATABASE_USERNAME:aiot02_team2}
+    password: ${DATABASE_PASSWORD:m/NWS@3y-8)UZ2Zo}
+
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: none
+    show-sql: ${JPA_SHOW_SQL:true}
+
   rabbitmq:
     host: localhost
     port: 5672
     username: admin
     password: nhnacademy123!
-    listener:
-      simple:
-        retry:
-          enabled: true
-          max-attempts: 3
-          initial-interval: 2000
-        default-requeue-rejected: false
-      direct:
-        acknowledge-mode: auto
+
   mail:
     host: smtp.gmail.com
     port: 587
@@ -31,9 +37,23 @@ spring:
     default-encoding: UTF-8
     debug: true
 
-
 server:
   port: 10260
-  
+
+logging:
+  pattern:
+    console: "${LOGPATTERN_CONSOLE:%green(%d{HH:mm:ss.SSS}) %blue(%-5level) %red([%thread]) %yellow(%logger{15}) - %msg%n}"
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:10252/eureka/
+  instance:
+    instance-id: "${spring.application.name}:${spring.application.instance_id:${random.value}}"
+    prefer-ip-address: true
+
 email:
   queue: email-queue
+
