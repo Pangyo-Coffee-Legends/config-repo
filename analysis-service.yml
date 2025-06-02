@@ -7,6 +7,11 @@ spring:
     username: aiot02_team2
     password: m/NWS@3y-8)UZ2Zo
 
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
 server:
   port: 10261
 
