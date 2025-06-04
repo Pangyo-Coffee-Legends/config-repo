@@ -3,6 +3,7 @@ spring:
   application:
     name: chat-service
   datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://s4.java21.net:13306/aiot02_team2
     username: aiot02_team2
     password: m/NWS@3y-8)UZ2Zo
