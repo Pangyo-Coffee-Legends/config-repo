@@ -1,19 +1,19 @@
-# config-repo/member-service.yml
 spring:
   application:
     name: chat-service
   datasource:
-    url: jdbc:mysql://s4.java21.net:13306/aiot02_team2
-    username: aiot02_team2
-    password: m/NWS@3y-8)UZ2Zo
     driver-class-name: com.mysql.cj.jdbc.Driver
-
+    url: jdbc:mysql://${DATABASE_HOST:s4.java21.net}:${DATABASE_PORT:13306}/${DATABASE_NAME:aiot02_team2}
+    username: ${DATABASE_USERNAME:aiot02_team2}
+    password: ${DATABASE_PASSWORD:m/NWS@3y-8)UZ2Zo}
   jpa:
+    database: mysql
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
     hibernate:
       ddl-auto: none
+    show-sql: ${JPA_SHOW_SQL:true}
 
 server:
   port: 10259
