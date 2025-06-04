@@ -2,17 +2,12 @@
 spring:
   application:
     name: gateway-service
-
-server:
-  port: 10251
-
-spring:
   cloud:
     gateway:
       discovery:
         locator:
           enabled: true
-      globalcors:
+      globals:
         corsConfigurations:
           [/api/v1/token/**]:
             allowedOriginPatterns: "*"
@@ -38,7 +33,7 @@ spring:
             allowedHeaders: "*"
             allowCredentials: true
             maxAge: 3600
-           [/api/v1/meeting-rooms/**]:
+          [/api/v1/meeting-rooms/**]:
             allowedOriginPatterns: "*"
             allowedMethods: "GET,POST,PUT,DELETE"
             allowedHeaders: "*"
@@ -53,14 +48,17 @@ spring:
         add-to-simple-url-handler-mapping: true
       default-filters: DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials
 
+server:
+  port: 10251
+
 jwt:
   secret: |
-      -----BEGIN PUBLIC KEY-----
-      MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk51nWMvBVwGlg5hoolq2
-      J0zZgbmGVnF6ZkzQlosz2bZQU8I21LU0Y2GW78W+3l/edBY8G8yAEy3AyubILNLA
-      TSMB+kc3ZH+tTjycLIcyJiETR+dwGkzUcYKP++JsKNdEsevlkCtZ+QMTf5oblv57
-      FaZxAqsCKFr5/iRwckP0KxVyyBPM0WXypqiFUb5xHKzXAs7+1uOIft2xW1pzV8xD
-      SC63zDakepY+LFPijufVgA28PRR5M/i4g5M/LcXXT6ZznIOxIq52bTvDgAur32ce
-      71eVC7ZesHzW5o/bwN1BcnZ4uIuaUNEUSyEpUKOsZUOWHOSqMGAwuImD9PT/h6kS
-      oQIDAQAB
-      -----END PUBLIC KEY-----
+    -----BEGIN PUBLIC KEY-----
+    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk51nWMvBVwGlg5hoolq2
+    J0zZgbmGVnF6ZkzQlosz2bZQU8I21LU0Y2GW78W+3l/edBY8G8yAEy3AyubILNLA
+    TSMB+kc3ZH+tTjycLIcyJiETR+dwGkzUcYKP++JsKNdEsevlkCtZ+QMTf5oblv57
+    FaZxAqsCKFr5/iRwckP0KxVyyBPM0WXypqiFUb5xHKzXAs7+1uOIft2xW1pzV8xD
+    SC63zDakepY+LFPijufVgA28PRR5M/i4g5M/LcXXT6ZznIOxIq52bTvDgAur32ce
+    71eVC7ZesHzW5o/bwN1BcnZ4uIuaUNEUSyEpUKOsZUOWHOSqMGAwuImD9PT/h6kS
+    oQIDAQAB
+    -----END PUBLIC KEY-----
