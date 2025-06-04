@@ -8,13 +8,27 @@ server:
 
 eureka:
   client:
-    register-with-eureka: false   
-    fetch-registry: false         
+    register-with-eureka: true        
+    fetch-registry: true              
+    service-url:
+      defaultZone: http://eureka.aiot2.live:10252/eureka/ 
+
+  instance:
+    hostname: eureka.aiot2.live
+    prefer-ip-address: false
+    non-secure-port-enabled: true
+    non-secure-port: 10252
+    secure-port-enabled: false
+    status-page-url: https://eureka.aiot2.live/info
+    health-check-url: https://eureka.aiot2.live/actuator/health
+    home-page-url: https://eureka.aiot2.live/
+
   server:
-    wait-time-in-ms-when-sync-empty: 0  
+    enable-self-preservation: true
+    wait-time-in-ms-when-sync-empty: 0
 
 management:
   endpoints:
     web:
       exposure:
-        include: health,info,env 
+        include: health,info,refresh,env,configprops
