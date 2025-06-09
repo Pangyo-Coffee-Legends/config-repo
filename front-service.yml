@@ -28,5 +28,8 @@ server:
 rule-service:
   url: http://localhost:10263
 
+image-service:
+  url: http://localhost:10265
+
 iot-service:
   url: http://localhost:10266
